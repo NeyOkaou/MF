@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://moj7cru3k4f7"]
+
+[ext_resource type="Script" path="res://Scripts/Fuyukaza/fuyukaza.gd" id="1_mltrq"]
+[ext_resource type="Texture2D" uid="uid://d3kylbylagbkn" path="res://Assets/Characters/Fuyukaza/Fuyuspritesheet.png" id="2_ubui3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v40p"]
+size = Vector2(48, 82)
+
+[node name="Fuyukaza" type="CharacterBody2D"]
+script = ExtResource("1_mltrq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -41)
+shape = SubResource("RectangleShape2D_3v40p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -55)
+texture = ExtResource("2_ubui3")
