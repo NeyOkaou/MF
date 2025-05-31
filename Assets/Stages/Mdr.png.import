@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3kylbylagbkn"
-path="res://.godot/imported/Fuyuspritesheet.png-d0a27fa7ad464c1eaff25229c7491d0c.ctex"
+uid="uid://doh7rthpjyolp"
+path="res://.godot/imported/Mdr.png-8e3804467916d7d98ef7d3224c78742f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fuyukaza/Fuyuspritesheet.png"
-dest_files=["res://.godot/imported/Fuyuspritesheet.png-d0a27fa7ad464c1eaff25229c7491d0c.ctex"]
+source_file="res://Assets/Stages/Mdr.png"
+dest_files=["res://.godot/imported/Mdr.png-8e3804467916d7d98ef7d3224c78742f.ctex"]
 
 [params]
 
