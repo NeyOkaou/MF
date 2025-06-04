@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgb6gxl5ffk8k"
-path="res://.godot/imported/Walk.png-44c693071fd8e017263d5351920ac2fe.ctex"
+uid="uid://8rdppednkbhg"
+path="res://.godot/imported/LP.png-fb80cf5e901837dce06f1baa5dfb60fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Fuyukaza/Sprites/Walk.png"
-dest_files=["res://.godot/imported/Walk.png-44c693071fd8e017263d5351920ac2fe.ctex"]
+source_file="res://Assets/Characters/Fuyukaza/Sprites/LP/LP.png"
+dest_files=["res://.godot/imported/LP.png-fb80cf5e901837dce06f1baa5dfb60fa.ctex"]
 
 [params]
 

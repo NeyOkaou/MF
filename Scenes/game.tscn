@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxsjirooe3tgu"]
 
-[ext_resource type="PackedScene" uid="uid://cb380emsuv83f" path="res://Scenes/Stages/Mdr.tscn" id="1_vqdv1"]
+[ext_resource type="PackedScene" uid="uid://cb380emsuv83f" path="res://Scenes/Stages/twilight_duel.tscn" id="1_vqdv1"]
 [ext_resource type="PackedScene" uid="uid://moj7cru3k4f7" path="res://Scenes/Characters/fuyukaza.tscn" id="2_hokdu"]
 [ext_resource type="PackedScene" uid="uid://d0bdys2tegh1y" path="res://Scenes/Characters/gyaoon.tscn" id="3_3vbsg"]
 
@@ -9,7 +9,7 @@
 [node name="Stage" parent="." instance=ExtResource("1_vqdv1")]
 
 [node name="Fuyukaza" parent="." instance=ExtResource("2_hokdu")]
-position = Vector2(1081, 541)
+position = Vector2(643, 717)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(572, 324)

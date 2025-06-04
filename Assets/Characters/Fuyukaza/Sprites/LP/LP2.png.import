@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsa8a0lrgmm8x"
-path="res://.godot/imported/crouching.png-f5ab218e2b6f23ee1a320263678f072e.ctex"
+uid="uid://b002lwxrudwk6"
+path="res://.godot/imported/LP2.png-9db86951c66ad2df0c89326775179bd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Fuyukaza/Sprites/crouching.png"
-dest_files=["res://.godot/imported/crouching.png-f5ab218e2b6f23ee1a320263678f072e.ctex"]
+source_file="res://Assets/Characters/Fuyukaza/Sprites/LP/LP2.png"
+dest_files=["res://.godot/imported/LP2.png-9db86951c66ad2df0c89326775179bd8.ctex"]
 
 [params]
 
