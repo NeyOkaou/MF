@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doh7rthpjyolp"
-path="res://.godot/imported/Mdr.png-8e3804467916d7d98ef7d3224c78742f.ctex"
+uid="uid://cldwj6mf3lgob"
+path="res://.godot/imported/idle2.png-9cb0711c4d2d8119efdee070769bfc9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Stages/Mdr.png"
-dest_files=["res://.godot/imported/Mdr.png-8e3804467916d7d98ef7d3224c78742f.ctex"]
+source_file="res://Assets/Characters/Fuyukaza/Sprites/idle2.png"
+dest_files=["res://.godot/imported/idle2.png-9cb0711c4d2d8119efdee070769bfc9d.ctex"]
 
 [params]
 

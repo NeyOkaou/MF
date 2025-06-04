@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0bdys2tegh1y"]
+
+[ext_resource type="Texture2D" uid="uid://d2frwytdqiy4p" path="res://Assets/Characters/Gyaoon/Sprite/Idle.png" id="1_emf3r"]
+[ext_resource type="Script" path="res://Scripts/Gyaoon/gyaoon.gd" id="1_qka5e"]
+[ext_resource type="Texture2D" uid="uid://wv46kyi8fi0r" path="res://Assets/Characters/Gyaoon/Sprite/Idle 2.png" id="2_h8snp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0h35"]
+size = Vector2(298, 370)
+
+[sub_resource type="Animation" id="Animation_55wyb"]
+resource_name = "IDLE"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("1_emf3r"), ExtResource("2_h8snp")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkjai"]
+_data = {
+"IDLE": SubResource("Animation_55wyb")
+}
+
+[node name="Gyaoon" type="CharacterBody2D"]
+script = ExtResource("1_qka5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -185)
+shape = SubResource("RectangleShape2D_m0h35")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -211)
+texture = ExtResource("2_h8snp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lkjai")
+}

@@ -1,18 +1,97 @@
-[gd_scene load_steps=4 format=3 uid="uid://moj7cru3k4f7"]
+[gd_scene load_steps=16 format=3 uid="uid://moj7cru3k4f7"]
 
 [ext_resource type="Script" path="res://Scripts/Fuyukaza/fuyukaza.gd" id="1_mltrq"]
-[ext_resource type="Texture2D" uid="uid://d3kylbylagbkn" path="res://Assets/Characters/Fuyukaza/Fuyuspritesheet.png" id="2_ubui3"]
+[ext_resource type="Shape2D" uid="uid://6867k32h6qxr" path="res://Ressources/Fuyu_Standing.tres" id="2_hlfe2"]
+[ext_resource type="Texture2D" uid="uid://dv2ckh4n4ymbt" path="res://Assets/Characters/Fuyukaza/Sprites/Walk2.png" id="2_lgwqv"]
+[ext_resource type="Texture2D" uid="uid://bpx8b0xc7sexn" path="res://Assets/Characters/Fuyukaza/Sprites/Jump2.png" id="2_nmgrd"]
+[ext_resource type="Texture2D" uid="uid://cldwj6mf3lgob" path="res://Assets/Characters/Fuyukaza/Sprites/idle2.png" id="2_xaluy"]
+[ext_resource type="Texture2D" uid="uid://b24d1q2faxjif" path="res://Assets/Characters/Fuyukaza/Sprites/Idle.png" id="3_uld12"]
+[ext_resource type="Texture2D" uid="uid://dsa8a0lrgmm8x" path="res://Assets/Characters/Fuyukaza/Sprites/crouching.png" id="4_p0dnx"]
+[ext_resource type="Texture2D" uid="uid://cn4gywxgjopfw" path="res://Assets/Characters/Fuyukaza/Sprites/crouching2.png" id="5_rqg4d"]
+[ext_resource type="Texture2D" uid="uid://cb54qoxprakly" path="res://Assets/Characters/Fuyukaza/Sprites/Jump.png" id="7_3u3cl"]
+[ext_resource type="Texture2D" uid="uid://bgb6gxl5ffk8k" path="res://Assets/Characters/Fuyukaza/Sprites/Walk.png" id="9_jmais"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v40p"]
-size = Vector2(48, 82)
+[sub_resource type="Animation" id="Animation_lw3hv"]
+resource_name = "IDLE"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_xaluy"), ExtResource("3_uld12"), ExtResource("3_uld12"), ExtResource("2_xaluy"), ExtResource("3_uld12"), ExtResource("2_xaluy")]
+}
+
+[sub_resource type="Animation" id="Animation_eyy6l"]
+resource_name = "CROUCHING"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_p0dnx"), ExtResource("5_rqg4d"), ExtResource("4_p0dnx"), ExtResource("5_rqg4d"), ExtResource("4_p0dnx"), ExtResource("5_rqg4d"), ExtResource("4_p0dnx"), ExtResource("5_rqg4d"), ExtResource("4_p0dnx"), ExtResource("5_rqg4d")]
+}
+
+[sub_resource type="Animation" id="Animation_v6jw2"]
+resource_name = "JUMP"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_3u3cl"), ExtResource("2_nmgrd"), ExtResource("7_3u3cl"), ExtResource("7_3u3cl"), ExtResource("4_p0dnx"), ExtResource("2_nmgrd"), ExtResource("7_3u3cl"), ExtResource("2_nmgrd"), ExtResource("7_3u3cl"), ExtResource("2_nmgrd")]
+}
+
+[sub_resource type="Animation" id="Animation_0foah"]
+resource_name = "WALK"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("9_jmais"), ExtResource("2_lgwqv")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f78wm"]
+_data = {
+"CROUCHING": SubResource("Animation_eyy6l"),
+"IDLE": SubResource("Animation_lw3hv"),
+"JUMP": SubResource("Animation_v6jw2"),
+"WALK": SubResource("Animation_0foah")
+}
 
 [node name="Fuyukaza" type="CharacterBody2D"]
 script = ExtResource("1_mltrq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -41)
-shape = SubResource("RectangleShape2D_3v40p")
+position = Vector2(1, -168)
+shape = ExtResource("2_hlfe2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -55)
-texture = ExtResource("2_ubui3")
+position = Vector2(17, -192)
+texture = ExtResource("5_rqg4d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f78wm")
+}
